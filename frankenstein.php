@@ -105,14 +105,13 @@ background-color: rgb(15, 90, 112);
 
 <body>
 <?php
-    ini_set('display_errors', 0);
     $resultado = eval("return ".$_POST["ans"]." ;");
 ?>
 <!-- Empieza codigo calculadora html-->
 
   <form name="calculator" method="POST">
 
-    <input type="textfield" name="ans" value="<?php echo isset($resultado) ?>">
+    <input type="textfield" name="ans" value="<?php echo $resultado ?>">
 
     <br>
 
