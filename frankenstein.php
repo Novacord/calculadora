@@ -105,6 +105,7 @@ background-color: rgb(15, 90, 112);
 
 <body>
 <?php
+    ini_set('display_errors', 0);
     $resultado = eval("return ".$_POST["ans"]." ;");
 ?>
 <!-- Empieza codigo calculadora html-->
@@ -145,21 +146,29 @@ background-color: rgb(15, 90, 112);
 
     <br>
 
+    <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+
     <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
 
-    <input type="button" value="c" onClick="document.calculator.ans.value=' '">
-
-    <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+    <input type="button" value="√" onClick="document.calculator.ans.value+='sqrt('">
 
     <input type="submit" value="=">
 
     <br>
 
-    <input type="button" value="√" onClick="document.calculator.ans.value+='sqrt('">
+    <input type="button" value="^2" onClick="document.calculator.ans.value+='**2'">
+    
+    <input type="button" value="sin" onClick="document.calculator.ans.value+='sin('">
+
+    <input type="button" value="cos" onClick="document.calculator.ans.value+='cos('">
+
+    <input type="button" value="c" onClick="document.calculator.ans.value=' '">
 
     <input type="button" value="(" onClick="document.calculator.ans.value+='('">
-    
+
     <input type="button" value=")" onClick="document.calculator.ans.value+=')'">
+
+    <input type="button" value="<==" onClick="document.calculator.ans.value = document.calculator.ans.value.slice(0, document.calculator.ans.value.length - 1)">
 
     </form>
 
