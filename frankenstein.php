@@ -112,7 +112,7 @@ background-color: rgb(15, 90, 112);
 
   <form name="calculator" method="POST">
 
-    <input type="textfield" name="ans" value="<?php echo $resultado ?>">
+    <input type="textfield" name="ans" value="<?php echo isset($resultado) ?>">
 
     <br>
 
@@ -168,7 +168,9 @@ background-color: rgb(15, 90, 112);
 
     <input type="button" value=")" onClick="document.calculator.ans.value+=')'">
 
-    <input type="button" value="<==" onClick="document.calculator.ans.value = document.calculator.ans.value.slice(0, document.calculator.ans.value.length - 1)">
+    <input type="button" value="." onClick="document.calculator.ans.value+='.'">
+
+    <input type="button" value="<" onClick="document.calculator.ans.value = document.calculator.ans.value.slice(0, document.calculator.ans.value.length - 1)">
 
     </form>
 
